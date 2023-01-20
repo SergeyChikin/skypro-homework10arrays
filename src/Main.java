@@ -20,22 +20,24 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1");
+        int[] randomArray = generateRandomArray();
         int amountOfExpenses = 0;
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            amountOfExpenses = amountOfExpenses + generateRandomArray()[i];
+        for (int i = 0; i < randomArray.length; i++) {
+            amountOfExpenses = amountOfExpenses + randomArray[i];
         }
         System.out.println("Сумма трат за месяц составила " + amountOfExpenses + " рублей");
     }
 
     public static void task2() {
         System.out.println("Задача 2");
-        int minExpenses = generateRandomArray()[0];
-        int maxExpenses = generateRandomArray()[0];
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            if (generateRandomArray()[i] < minExpenses) {
-                minExpenses = generateRandomArray()[i];
-            } else if (generateRandomArray()[i] > maxExpenses) {
-                maxExpenses = generateRandomArray()[i];
+        int[] randomArray = generateRandomArray();
+        int minExpenses = randomArray[0];
+        int maxExpenses = randomArray[0];
+        for (int i = 0; i < randomArray.length; i++) {
+            if (randomArray[i] < minExpenses) {
+                minExpenses = randomArray[i];
+            } else if (randomArray[i] > maxExpenses) {
+                maxExpenses = randomArray[i];
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minExpenses + " рублей");
@@ -44,11 +46,12 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
+        int[] randomArray = generateRandomArray();
         float amountOfExpenses = 0;
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            amountOfExpenses = amountOfExpenses + generateRandomArray()[i];
+        for (int i = 0; i < randomArray.length; i++) {
+            amountOfExpenses = amountOfExpenses + randomArray[i];
         }
-        float averageExpenses = amountOfExpenses / generateRandomArray().length;
+        float averageExpenses = amountOfExpenses / randomArray.length;
         System.out.println("Средняя сумма трат за месяц составила " + averageExpenses + " рублей");
     }
 
